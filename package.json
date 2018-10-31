@@ -1,0 +1,18 @@
+{
+  "name": "verify-pubsub-cf",
+  "version": "1.0.0",
+  "description": "Cloud Foundry wrapper for the verify-pubsub repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Fehr",
+  "license": "MIT",
+  "dependencies": {
+    "verify-pubsub": "^1.0.0"
+  },
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.4.1"
+  }
+}
