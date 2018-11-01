@@ -9,10 +9,11 @@
   "author": "Robin Fehr",
   "license": "MIT",
   "dependencies": {
-    "verify-pubsub": "^1.0.0"
+    "cfenv": "^1.1.0",
+    "verify-pubsub": "1.0.3"
   },
   "engines": {
-    "node": "10.11.0",
-    "npm": "6.4.1"
+    "node": "10.x",
+    "npm": "6.x"
   }
 }

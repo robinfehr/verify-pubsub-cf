@@ -13,9 +13,9 @@ git clone https://github.com/robinfehr/verify-pubsub-cf.git
 cd verify-pubsub-cf
 
 cf login yourCfEndpoint
-cf push verify-pubsub-subscriber1 -c "node index.js subscribe"
-cf push verify-pubsub-subscriber2 -c "node index.js subscribe"
-cf push verify-pubsub-publisher -c "node index.js publish"
+cf push verify-pubsub-subscriber1 -c "node index.js subscribe" -b nodejs_buildpack -u process
+cf push verify-pubsub-subscriber2 -c "node index.js subscribe" -b nodejs_buildpack -u process
+cf push verify-pubsub-publisher -c "node index.js publish" -b nodejs_buildpack -u process
 ```
 
 ---

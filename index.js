@@ -1,24 +1,25 @@
-const cfenv = require('cfenv');
 const dbWrapper = require('verify-pubsub');
+const cfenv = require('cfenv');
 
 const appEnv = cfenv.getAppEnv();
-const redis = appEnv.getService('redis1').credentials;
+const redis = appEnv.getService('redis').credentials;
 
 const settings = {
   database: 'redis',
-  prefix: 'app_part_denorm_rev_guard',
   host: redis.host,
   port: redis.port,
   password: redis.password
 };
 
 if (process.argv[2] === 'publish') {
-  new dbWrapper(setting, (db) => {
-    db.startPublish(argv.key, argv.interval);
+  new dbWrapper(settings, (db) => {
+    db.startPublish('foobar', 1000);
   });
 } else if (process.argv[2] === 'subscribe') {
-  new dbWrapper(setting, (db) => {
-    db.startPublish(argv.key, argv.interval);
+  console.info('Subsciber is getting setup');
+  new dbWrapper(settings, (db) => {
+    console.log('startSubscribe');
+    db.startSubscribe('foobar');
   });
 } else {
   console.error('Error occured - Could not parse arguments.');
