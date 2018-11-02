@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "cfenv": "^1.1.0",
-    "verify-pubsub": "1.0.3"
+    "verify-pubsub": "1.1.1"
   },
   "engines": {
     "node": "10.x",
